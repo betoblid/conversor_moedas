@@ -1,0 +1,83 @@
+@import "variavel.scss";
+
+
+
+#container_alert{
+    min-width: 400px;
+    min-height: 45px;
+    background-color: $white;
+    color: black;
+    border-radius: 10px;
+    position: absolute;
+    right: 10px;
+    top: 10vh;
+
+    button{
+        padding: 5px;
+        position: absolute;
+        top: -10px;
+        
+    }
+
+    .card_mensagem{
+        
+        padding: 10px 0;
+        p{
+            font: 700 18px Arial;
+            color: black;
+            text-align: center;
+        }   
+    }
+
+    .container_cor{
+        height: 7px;
+        width: 100%;
+        background: rgb(191, 191, 191);
+
+        .cor{
+            width: 100%;
+            height: 7px;
+            background: green;
+            animation: logcor 3.8s linear;
+        }
+
+    }
+}
+
+//mensagem com o resultado da conversão dos valores
+.resu{
+    background: green;
+    padding: 10px 15px;
+    font: bold 22px Arial;
+    margin: 15px 0;
+}
+
+
+//class que será manipulada com js
+
+.hidden{
+    display: none;
+}
+
+//animação do container cor
+
+@keyframes logcor{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+
+@media(max-width: 800px){
+    #container_alert{
+        min-width: 80%;
+        right: 0;
+    }
+    .resu{
+        padding: 5px 10px;
+        font: bold 20px Arial;
+       
+    }
+}

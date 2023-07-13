@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="herbert souza">
+    <meta name="description" content="site que converte real para as moedas que possui na lista de converção do site. aplicação web para treinar o js">
+    <meta name="robots" content="index">
+    <title>conversor de moedas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="moedas/bitcoin.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>conversor de moedas</h1>
+    </header>
+    <main>
+        <div class="container">
+
+            <div id="container_alert" class="">
+                <div class="position_right">
+                    <button id="btn_fechar_msg">X</button>
+                    <div class="card_mensagem">
+                        <div id="mensagem">
+                            <p>seja bem vindo</p>
+                        </div>
+                    </div>
+                    <div class="container_cor"><div class="cor"></div></div>
+                </div>
+            </div>
+
+            <div class="card_moeda">
+                <h2>conversor</h2>
+                <form method="post" id="formulario">
+                    <p>R$ <input type="number" id="moeda" name="moeda" placeholder="moedas" max="10000" step="0.01" ></p>
+
+                    <input type="radio" value="1" id="dolar" name="moeda">
+
+                    <label for="dolar">DOLÁR</label>
+
+                    <input type="radio" name="moeda" value="2" id="euro">
+
+                    <label for="euro">EURO</label>
+                    <input type="radio" value="3" id="libra" name="moeda" >
+
+                    <label for="libra">LIBRA</label>
+                    <input type="radio" value="4" id="bitcoin" name="moeda">
+
+                    <label for="bitcoin">BITCOIN</label>
+
+                    <p>
+                    <input type="submit" value="Converte" id="enviar">
+                    <input type="reset" id="limpar" value="Limpar">
+                    </p>
+                </form>
+            </div>
+            <div id="resu" class="">
+                
+            </div>
+            <div class="card_logo_moeda">
+                <img src="moedas/dolar.png" alt="">
+                <img src="moedas/euro.png" alt="">
+                <img src="moedas/libra.png" alt="">
+                <img src="moedas/real.png" alt="">
+            </div>
+        </div>
+    </main>
+
+    <script src="script/functions.js">
+    </script>
+</body>
+</html>

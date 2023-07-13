@@ -1,0 +1,139 @@
+@import "variavel.scss";
+
+header{
+    height: 10vh;
+    text-align: center;
+    background: rgb(32, 32, 32);
+    color: $white;
+    font: bold 28px Arial;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: $black;
+    color: $white;
+    min-height: 90vh;
+    width: 100%;
+}
+
+.card_moeda{
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px black;
+    padding: 20px;
+    width: 75%;
+    text-align: center;
+    background: $gray_dark;
+
+    h2{
+        font: bold 26px Arial;
+        
+    }
+    p{
+        font: bold 30px Arial;
+
+        input[type="number"]{
+        font-size: 24px;
+        margin: 20px auto;
+        padding: 10px;
+        }
+    }
+    
+    input[type="radio"]{
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+
+    input[type="submit"],
+    input[type="reset"]{
+        padding: 10px 30px;
+        margin: 20px 10px;
+        font-size: 20px;
+        background: $gray_dark;
+        color: $white;
+        border-radius: 20px;
+    }
+
+    input[type="reset"]{
+        background: red;
+    }
+
+    label{
+        font: 900 20px Arial;
+    }
+}
+
+
+
+.card_logo_moeda{
+
+    img{
+        width: 100px;
+        margin-left: 10px;
+        animation: efeitomoeda 5s infinite;
+    }
+}
+
+
+//efeito das moedas
+
+@keyframes efeitomoeda{
+    
+    0%{
+        box-shadow: 0 0 0px yellow;
+    }
+    50%{
+        box-shadow: 0 0 30px yellow;
+    }
+    100%{
+        box-shadow: 0 0 0px yellow;
+    }
+}
+
+@media(max-width: 700px){
+
+    header{
+        height: auto;
+        font: bold 20px Arial;
+    }
+    .container{
+        min-height: 94vh;
+    }
+    
+    .card_moeda{
+    
+        h2{
+            font: bold 24px Arial;
+            
+        }
+        p{
+            font: bold 20px Arial;
+    
+            input[type="number"]{
+                width: 80%;
+            }
+        }
+        
+        input[type="radio"]{
+            margin-left: 4px;
+            margin-bottom: 30px;
+        }
+    
+        input[type="submit"],
+        input[type="reset"]{
+            margin: 0 5px;
+            border-radius: 15px;
+        }
+        label{
+            font: 900 18px Arial;
+        }
+    }
+    .card_logo_moeda{
+    
+        img{
+            width: 80px;
+            margin-left: 5px;
+        }
+    }
+}
